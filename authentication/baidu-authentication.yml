@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://intl.cloud.baidu.com/doc/qianfan/index.html, https://lbsyun.baidu.com/faq/api?title=webapi
+summary:
+  types: [apiKey, http]
+  api_key_in: [header, query]
+notes: >
+  Baidu has no single unified auth model — each product line documents its own scheme.
+schemes:
+  - name: qianfan-bearer
+    product: Baidu AI Cloud Qianfan (LLM / MaaS)
+    type: http
+    scheme: bearer
+    location: Authorization header
+    format: "API key prefixed bce-v3/ALTAK-..., created in the Baidu Intelligent Cloud console (Security Authentication > API Key)"
+    openai_compatible: true
+    base_url: https://qianfan.baidubce.com/v2
+    docs: https://intl.cloud.baidu.com/doc/qianfan/index.html
+  - name: bce-ak-sk-signature
+    product: Baidu Cloud (BCE) IAM signed requests / SDKs
+    type: apiKey
+    scheme: signature
+    location: Authorization header (BCE signing with Access Key + Secret Key)
+    docs: https://intl.cloud.baidu.com/doc/Reference/s/Njwvz1wot
+  - name: maps-ak
+    product: Baidu Maps Open Platform (LBS Web Service API)
+    type: apiKey
+    in: query
+    parameter: ak
+    optional_signature: SN (SHA-1 signature over request + SK) for server-side keys
+    docs: https://lbsyun.baidu.com/faq/api?title=webapi/appendix
