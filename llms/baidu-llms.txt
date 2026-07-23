@@ -1,0 +1,38 @@
+# Baidu
+
+> Baidu is a leading Chinese internet and AI company. Its developer surface spans three
+> main product lines: Baidu AI Cloud "Qianfan" (an LLM / Model-as-a-Service platform hosting
+> the ERNIE model family with an OpenAI-compatible REST API), the Baidu AI Open Platform
+> (OCR, NLP, speech, face, image, and knowledge-graph APIs), and the Baidu Maps Open Platform
+> (LBS: geocoding, place search, routing, weather, and traffic). Baidu Maps also ships an
+> official Model Context Protocol (MCP) server.
+
+## APIs
+- [Baidu AI Cloud Qianfan (ERNIE LLM)](https://intl.cloud.baidu.com/product/qianfan.html): OpenAI-compatible chat completions at https://qianfan.baidubce.com/v2
+- [Baidu AI Open Platform](https://ai.baidu.com/): OCR, NLP, speech, face, image, knowledge graph
+- [Baidu Maps Open Platform (LBS)](https://lbsyun.baidu.com/): geocoding, places, routing, weather, traffic
+
+## Agent access
+- [Baidu Maps MCP Server](https://github.com/baidu-maps/mcp): official MCP server; hosted at https://mcp.map.baidu.com/mcp (Streamable HTTP) and https://mcp.map.baidu.com/sse (SSE)
+
+## SDKs
+- [qianfan (PyPI)](https://pypi.org/project/qianfan/): Baidu AI Cloud Qianfan SDK — pip install qianfan
+- [baidu-aip (PyPI)](https://pypi.org/project/baidu-aip/): Baidu AI Open Platform SDK — pip install baidu-aip
+- [appbuilder-sdk (PyPI)](https://pypi.org/project/appbuilder-sdk/): Baidu AppBuilder agent SDK
+- [mcp-server-baidu-maps (PyPI)](https://pypi.org/project/mcp-server-baidu-maps/) / [@baidumap/mcp-server-baidu-map (npm)](https://www.npmjs.com/package/@baidumap/mcp-server-baidu-map)
+
+## Source
+- [baidubce on GitHub](https://github.com/baidubce): Baidu Cloud SDKs (Qianfan, AppBuilder, BCE)
+- [baidu-maps on GitHub](https://github.com/baidu-maps): Baidu Maps SDKs and MCP server
+- [Baidu-AIP on GitHub](https://github.com/Baidu-AIP): Baidu AI Open Platform SDKs
+
+## Docs
+- [Qianfan documentation](https://intl.cloud.baidu.com/doc/qianfan/index.html)
+- [Baidu Maps Web Service API](https://lbsyun.baidu.com/faq/api?title=webapi)
+- [Baidu AI Cloud console](https://console.bce.baidu.com/)
+
+## Enrichment artifacts
+- packages/baidu-packages.yml
+- mcp/baidu-mcp.yml
+- authentication/baidu-authentication.yml
+- security/baidu-domain-security.yml

@@ -1,0 +1,48 @@
+generated: '2026-07-18'
+method: searched
+source: pypi.org, npmjs.com, github.com/baidubce, github.com/baidu-maps, github.com/Baidu-AIP
+packages:
+  - language: python
+    registry: pypi
+    name: qianfan
+    url: https://pypi.org/project/qianfan/
+    install: pip install qianfan
+    official: true
+    covers: Baidu AI Cloud Qianfan (ERNIE) LLM / MaaS platform SDK
+    source_code: https://github.com/baidubce/bce-qianfan-sdk
+  - language: python
+    registry: pypi
+    name: baidu-aip
+    url: https://pypi.org/project/baidu-aip/
+    install: pip install baidu-aip
+    official: true
+    covers: Baidu AI Open Platform (OCR, NLP, face, speech, knowledge graph)
+    source_code: https://github.com/Baidu-AIP
+  - language: python
+    registry: pypi
+    name: mcp-server-baidu-maps
+    url: https://pypi.org/project/mcp-server-baidu-maps/
+    install: pip install mcp-server-baidu-maps
+    official: true
+    covers: Baidu Maps MCP server (geocoding, places, routing, weather, traffic)
+    source_code: https://github.com/baidu-maps/mcp
+  - language: javascript
+    registry: npm
+    name: "@baidumap/mcp-server-baidu-map"
+    url: https://www.npmjs.com/package/@baidumap/mcp-server-baidu-map
+    install: npm install -g @baidumap/mcp-server-baidu-map
+    official: true
+    covers: Baidu Maps MCP server (Node)
+    source_code: https://github.com/baidu-maps/mcp
+  - language: python
+    registry: pypi
+    name: appbuilder-sdk
+    url: https://pypi.org/project/appbuilder-sdk/
+    install: pip install appbuilder-sdk
+    official: true
+    covers: Baidu AppBuilder — build AI agents/applications on Qianfan
+    source_code: https://github.com/baidubce/app-builder
+notes: >
+  Qianfan is also usable via the standard OpenAI SDK by pointing base_url at
+  https://qianfan.baidubce.com/v2 (OpenAI-compatible chat completions). Third-party
+  wrappers (e.g. @langchain/baidu-qianfan) exist but are not first-party and are excluded.

@@ -1,8 +1,15 @@
 aid: baidu
 name: Baidu
-description: 'Baidu is a company surfaced as a portfolio company of hillhouse, idg-capital and added to
-  the API Evangelist network as a stub for enrichment. Sector: technology. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Baidu is a leading Chinese internet and artificial-intelligence company whose developer
+  surface spans three main product lines. Baidu AI Cloud "Qianfan" is a Model-as-a-Service
+  platform hosting the ERNIE model family behind an OpenAI-compatible REST API for chat,
+  embeddings, and agent building (AppBuilder). The Baidu AI Open Platform exposes OCR, NLP,
+  speech, face, image, and knowledge-graph APIs. The Baidu Maps Open Platform (LBS) provides
+  geocoding, place search, route planning, weather, and real-time traffic to millions of
+  registered developers, and ships an official Model Context Protocol (MCP) server with a
+  hosted remote endpoint. This profile was surfaced as a portfolio company and enriched with
+  real, first-party developer artifacts.
 url: https://raw.githubusercontent.com/api-evangelist/baidu/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,13 +18,63 @@ x-backed-by:
 - idg-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://www.baidu.com/favicon.ico
 tags:
 - Company
 - Technology
-apis: []
+- Artificial Intelligence
+- Machine Learning
+- LLM
+- Maps
+- Geolocation
+- Cloud
+- China
+apis:
+- name: Baidu AI Cloud Qianfan
+  description: >-
+    OpenAI-compatible LLM / Model-as-a-Service API hosting the ERNIE family and select
+    open models (DeepSeek, GLM, etc.) via chat completions and embeddings.
+  humanURL: https://intl.cloud.baidu.com/product/qianfan.html
+  baseURL: https://qianfan.baidubce.com/v2
+  tags:
+  - LLM
+  - Artificial Intelligence
+  - ERNIE
+  properties:
+  - type: Documentation
+    url: https://intl.cloud.baidu.com/doc/qianfan/index.html
+  - type: Authentication
+    url: authentication/baidu-authentication.yml
+- name: Baidu Maps Open Platform
+  description: >-
+    LBS web-service API: geocoding, reverse geocoding, place/POI search, route planning,
+    weather, IP location, and real-time traffic. Ships an official MCP server.
+  humanURL: https://lbsyun.baidu.com/
+  baseURL: https://api.map.baidu.com
+  tags:
+  - Maps
+  - Geolocation
+  - LBS
+  properties:
+  - type: Documentation
+    url: https://lbsyun.baidu.com/faq/api?title=webapi
+  - type: MCPServer
+    url: mcp/baidu-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +83,30 @@ maintainers:
 common:
 - type: Website
   url: https://www.baidu.com
+- type: DeveloperPortal
+  url: https://ai.baidu.com/
+- type: Documentation
+  url: https://intl.cloud.baidu.com/doc/qianfan/index.html
+- type: APIReference
+  url: https://lbsyun.baidu.com/faq/api?title=webapi
+- type: GitHubOrganization
+  url: https://github.com/baidubce
+- type: SignUp
+  url: https://console.bce.baidu.com/
+- type: Packages
+  url: packages/baidu-packages.yml
+- type: SDKs
+  url: packages/baidu-packages.yml
+- type: MCPServer
+  url: mcp/baidu-mcp.yml
+- type: Authentication
+  url: authentication/baidu-authentication.yml
+- type: DomainSecurity
+  url: security/baidu-domain-security.yml
+- type: LLMsTxt
+  url: llms/baidu-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

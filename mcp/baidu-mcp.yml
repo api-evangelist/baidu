@@ -1,0 +1,44 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://github.com/baidu-maps/mcp
+server:
+  name: baidu-maps
+  official: true
+  license: MIT
+  transport: [http, sse, stdio]
+  hosted:
+    streamable_http: https://mcp.map.baidu.com/mcp
+    sse: https://mcp.map.baidu.com/sse
+    auth: API key (AK) passed as `ak` query parameter; MCP (SSE) must be enabled on the Baidu Maps Open Platform
+  packages:
+    - registry: pypi
+      name: mcp-server-baidu-maps
+    - registry: npm
+      name: "@baidumap/mcp-server-baidu-map"
+tools:
+  - name: map_geocode
+    description: Convert an address to geographic coordinates
+  - name: map_reverse_geocode
+    description: Convert coordinates to a structured address
+  - name: map_search_places
+    description: POI search by keyword within a region or radius
+  - name: map_place_details
+    description: Retrieve detailed information for a POI
+  - name: map_directions_matrix
+    description: Batch route/distance calculation across multiple origins and destinations
+  - name: map_directions
+    description: Point-to-point route planning (driving, walking, riding, transit)
+  - name: map_weather
+    description: Weather query by location or district code
+  - name: map_ip_location
+    description: Approximate geolocation from an IP address
+  - name: map_road_traffic
+    description: Real-time road traffic conditions
+  - name: map_poi_extract
+    description: Extract POIs from free text (requires advanced permission)
+notes: >
+  Official Baidu Maps MCP server. A remote hosted server is offered at mcp.map.baidu.com
+  (Streamable HTTP + SSE) in addition to the self-hosted stdio/SSE packages. Baidu's other
+  products (Qianfan LLM, AI Open Platform) expose OpenAI-compatible / REST APIs but no
+  first-party MCP server was found at time of search.
