@@ -39,8 +39,30 @@ edges:
   matched_by: verified-token-table
   detected_by: sweep-model-routing.py
   first_seen: '2026-10-13'
+- partner_name: JetBrains Marketplace
+  partner: jetbrains
+  partner_match: aggregator
+  type: marketplace
+  marketplace: jetbrains
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://plugins.jetbrains.com/vendor/baidu
+  listing_count: 2
+  apps:
+  - Baidu Comate
+  - Baidu Comate (Gitee版)
+  publisher_name: Baidu Inc.
+  badges:
+  - Verified vendor
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
 generated: '2026-10-13'
 method: searched
 checked:
 - https://api.llmgateway.io/v1/models
 - https://openrouter.ai/api/v1/models
+- https://plugins.jetbrains.com/
+marketplace_apps: []
+source:
+- https://plugins.jetbrains.com/
