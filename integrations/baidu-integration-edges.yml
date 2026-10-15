@@ -206,6 +206,74 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-cloud-native.py
   first_seen: '2026-10-15'
+- partner_name: LF AI & Data (Landscape)
+  partner: lf-ai-data
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: AI & data landscape
+  evidence: https://github.com/lfai/landscape/blob/95d361b8abfdd04a8c76bf38a012778d13621b5e/landscape.yml
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: LF AI & Data Landscape (github.com/lfai/landscape landscape.yml @95d361b8ab)
+    spec_file: null
+    standard: LF AI & Data
+    role: lfai-project-host
+    registered_name: Baidu (hosting)
+    registered_names:
+    - Baidu (hosting)
+    website: https://www.baidu.com/
+    matched_domain: baidu.com
+    matched_by: domain
+    member_tier: null
+    hosting_company: true
+    lfai_projects: []
+    landscape_categories:
+    - Hosting Companies / Hosting Companies
+    landscape_entries: 1
+    signal_note: 'participation only: a landscape listing is standard-participant evidence, not depth. Entries,
+      categories, tier and projects are CONTEXT, never read (breadth is not credit)'
+    detected_by: sweep-mlops.py
+    detected: '2026-10-15'
+  detected_by: sweep-mlops.py
+  first_seen: '2026-10-15'
+- partner_name: MLCommons MLPerf
+  partner: mlcommons
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: ML benchmark results
+  evidence: https://github.com/mlcommons/training_results_v2.1/tree/main/closed/Baidu
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: MLCommons MLPerf results (github.com/mlcommons/<family>_results_v<round>, closed/ + open/ submitter
+      directories)
+    spec_file: null
+    standard: MLPerf (MLCommons)
+    role: mlperf-submitter (lapsed)
+    registered_name: Baidu
+    register_directories:
+    - Baidu
+    matched_domain: baidu.com
+    matched_by: domain
+    identity_source: wikidata Q14772 'Baidu' P856 https://www.baidu.com/
+    identity_note: 'MLPerf publishes names only: domain from Wikidata P856 (labelled lookup, Kin 2026-10-15 decision
+      1), then partner_link (domain + name check)'
+    certified_products:
+    - product: MLPerf Training (closed division)
+      newest_round: v2.1
+      lapsed: true
+    open_division_only: []
+    current_window: each family's newest 2 rounds
+    signal_note: certified_products = one entry per benchmark FAMILY with a closed-division (peer-reviewed, reference-rules)
+      result, lapsed outside the current window; open-division families, rounds and result counts are context, never
+      read
+    detected_by: sweep-mlops.py
+    detected: '2026-10-15'
+  detected_by: sweep-mlops.py
+  first_seen: '2026-10-15'
 generated: '2026-10-13'
 method: searched
 checked:
@@ -213,6 +281,9 @@ checked:
 - https://focus.finops.org/data-generators/
 - https://github.com/cncf/k8s-conformance
 - https://github.com/cncf/landscape
+- https://github.com/kubeflow/website
+- https://github.com/lfai/landscape
+- https://github.com/mlcommons
 - https://github.com/run-llama/llama_index/tree/main/llama-index-integrations
 - https://openrouter.ai/api/v1/models
 - https://plugins.jetbrains.com/
