@@ -303,6 +303,23 @@ edges:
     builder: 'community (Meltano Hub variant maintainers: matatika)'
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/tBmnNZgLQRyRih_ghMwhCg
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - EasyListening by Baidu Netdisk
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
 generated: '2026-10-13'
 method: searched
 checked:
@@ -317,6 +334,7 @@ checked:
 - https://github.com/run-llama/llama_index/tree/main/llama-index-integrations
 - https://openrouter.ai/api/v1/models
 - https://plugins.jetbrains.com/
+- zoom/integrations/zoom-integration-edges.yml
 marketplace_apps: []
 source:
 - https://plugins.jetbrains.com/
