@@ -274,6 +274,35 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-mlops.py
   first_seen: '2026-10-15'
+- partner_name: Meltano
+  partner: meltano
+  partner_match: aggregator
+  type: marketplace
+  marketplace: meltano-hub
+  channel: elt-connector
+  relationship: ipaas-bridge
+  direction: third-party
+  evidence: https://hub.meltano.com/extractors/tap-baidu--matatika
+  category: null
+  contract_reference:
+    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
+    spec_file: null
+    role: elt-connector:meltano-hub
+    registered_name: Baidu
+    matched_domain: baidu.com
+    matched_by: domain
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    plugins:
+    - tap-baidu--matatika
+    maintenance_status:
+    - active
+    quality:
+    - gold
+    builder: 'community (Meltano Hub variant maintainers: matatika)'
+  detected_by: sweep-data-integration.py
+  first_seen: '2026-10-18'
 generated: '2026-10-13'
 method: searched
 checked:
@@ -283,6 +312,7 @@ checked:
 - https://github.com/cncf/landscape
 - https://github.com/kubeflow/website
 - https://github.com/lfai/landscape
+- https://github.com/meltano/hub
 - https://github.com/mlcommons
 - https://github.com/run-llama/llama_index/tree/main/llama-index-integrations
 - https://openrouter.ai/api/v1/models
