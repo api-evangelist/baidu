@@ -15,28 +15,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: baidu-openrouter
-  label: OpenRouter
-  partner: openrouter
-  partner_name: OpenRouter
-  type: coverage
-  channel: partner-built
-  evidence: https://openrouter.ai/api/v1/models
-  source: edge
-  relationship: system-coverage
-  status: not-a-workflow
-  arazzo: null
-- slug: baidu-llm-gateway
-  label: LLM Gateway
-  partner: llmgateway-io
-  partner_name: LLM Gateway
-  type: coverage
-  channel: partner-built
-  evidence: https://api.llmgateway.io/v1/models
-  source: edge
-  relationship: system-coverage
-  status: not-a-workflow
-  arazzo: null
 - slug: baidu-llamaindex
   label: LlamaIndex
   partner: llamaindex
@@ -48,110 +26,46 @@
   relationship: system-coverage
   status: not-a-workflow
   arazzo: null
-- slug: baidu-cncf-cloud-native-landscape
-  label: CNCF (Cloud Native Landscape)
-  partner: cncf
-  partner_name: CNCF (Cloud Native Landscape)
-  category: Cloud native landscape
-  type: register
-  channel: standard-directory
-  evidence: https://github.com/cncf/landscape/blob/3a7d378b1824b82e729a453bb03fa6f1e37557e1/landscape.yml
+- slug: baidu-zoom-own
+  label: Zoom (own)
+  partner: zoom
+  partner_name: Zoom (own)
+  category: Zoom app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.zoom.us/apps/tBmnNZgLQRyRih_ghMwhCg
   source: edge
-  relationship: standard-participant
-  contract_reference:
-    register: CNCF Cloud Native Landscape (github.com/cncf/landscape landscape.yml @3a7d378b18)
-    spec_file: null
-    standard: Cloud Native (CNCF)
-    role: cncf-member (Gold)
-    registered_name: Baidu
-    registered_names:
-    - Baidu
-    - Baidu Cloud Container Engine
-    - Baidu Cloud Function Compute
-    website: https://cloud.baidu.com/
-    matched_domain: baidu.com
-    matched_by: domain
-    member_tier: Gold
-    joined: '2017-12-01'
-    end_user: false
-    cncf_projects: []
-    landscape_categories:
-    - Platform / Certified Kubernetes - Hosted
-    - Serverless / Hosted Platform
-    landscape_entries: 2
-    signal_note: 'participation only: a landscape listing is standard-participant evidence, not depth. Entries,
-      categories, tier and projects are CONTEXT, never read (breadth is not credit)'
-    detected_by: sweep-cloud-native.py
-    detected: '2026-10-15'
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: baidu-cncf-kubernetes-certified-service-provider
-  label: CNCF (Kubernetes Certified Service Provider)
-  partner: cncf
-  partner_name: CNCF (Kubernetes Certified Service Provider)
-  category: Kubernetes services
-  type: register
-  channel: standard-directory
-  evidence: https://landscape.cncf.io/?group=special&view-mode=grid
+- slug: baidu-meltano
+  label: Meltano
+  partner: meltano
+  partner_name: Meltano
+  type: marketplace
+  marketplace: meltano-hub
+  channel: elt-connector
+  evidence: https://hub.meltano.com/extractors/tap-baidu--matatika
   source: edge
-  relationship: standard-participant
+  relationship: ipaas-bridge
   contract_reference:
-    register: CNCF Kubernetes Certified Service Provider (github.com/cncf/landscape landscape.yml Special / Kubernetes
-      Certified Service Provider @3a7d378b18)
+    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
     spec_file: null
-    standard: Kubernetes (KCSP)
-    role: kcsp
+    role: elt-connector:meltano-hub
     registered_name: Baidu
-    website: https://cloud.baidu.com/
     matched_domain: baidu.com
     matched_by: domain
-    certified_products:
-    - product: Kubernetes Certified Service Provider
-      lapsed: false
-    signal_note: certified_products = ONE entry (the KCSP vetting itself), never a count
-    detected_by: sweep-cloud-native.py
-    detected: '2026-10-15'
-  status: not-a-workflow
-  arazzo: null
-- slug: baidu-cncf-certified-kubernetes
-  label: CNCF Certified Kubernetes
-  partner: cncf
-  partner_name: CNCF Certified Kubernetes
-  category: Certified Kubernetes
-  type: register
-  channel: standard-directory
-  evidence: https://github.com/cncf/k8s-conformance/tree/85d26a419e7df96137e66817b61cb22a616ce1e9/v1.35/baidu-cloud-cce
-  source: edge
-  relationship: standard-participant
-  contract_reference:
-    register: CNCF Certified Kubernetes (github.com/cncf/k8s-conformance @85d26a419e)
-    spec_file: null
-    standard: Kubernetes conformance
-    role: certified-kubernetes
-    registered_name: Baidu Cloud
-    website: https://cloud.baidu.com/product/cce.html
-    matched_domain: baidu.com
-    matched_by: domain
-    certified_products:
-    - product: hosted
-      newest_version: v1.35
-      lapsed: false
-    versions_certified:
-    - v1.24
-    - v1.26
-    - v1.28
-    - v1.30
-    - v1.31
-    - v1.32
-    - v1.34
-    - v1.35
-    products:
-    - Baidu Cloud Container Engine
-    current_window: v1.34+ (newest 4 minors in the register)
-    signal_note: certified_products = one entry per product TYPE (distribution/hosted/installer), lapsed when its
-      newest certified minor is outside the current window; products and versions are context, never read
-    detected_by: sweep-cloud-native.py
-    detected: '2026-10-15'
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    plugins:
+    - tap-baidu--matatika
+    maintenance_status:
+    - active
+    quality:
+    - gold
+    builder: 'community (Meltano Hub variant maintainers: matatika)'
   status: not-a-workflow
   arazzo: null
 - slug: baidu-lf-ai-data-landscape
@@ -161,11 +75,11 @@
   category: AI & data landscape
   type: register
   channel: standard-directory
-  evidence: https://github.com/lfai/landscape/blob/95d361b8abfdd04a8c76bf38a012778d13621b5e/landscape.yml
+  evidence: https://github.com/lfai/landscape/blob/3893e0631e1d12921a9b0ac25ffc78a2ac26239d/landscape.yml
   source: edge
   relationship: standard-participant
   contract_reference:
-    register: LF AI & Data Landscape (github.com/lfai/landscape landscape.yml @95d361b8ab)
+    register: LF AI & Data Landscape (github.com/lfai/landscape landscape.yml @3893e0631e)
     spec_file: null
     standard: LF AI & Data
     role: lfai-project-host
@@ -184,7 +98,7 @@
     signal_note: 'participation only: a landscape listing is standard-participant evidence, not depth. Entries,
       categories, tier and projects are CONTEXT, never read (breadth is not credit)'
     detected_by: sweep-mlops.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   status: not-a-workflow
   arazzo: null
 - slug: baidu-mlcommons-mlperf
@@ -221,48 +135,134 @@
       result, lapsed outside the current window; open-division families, rounds and result counts are context, never
       read
     detected_by: sweep-mlops.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   status: not-a-workflow
   arazzo: null
-- slug: baidu-meltano
-  label: Meltano
-  partner: meltano
-  partner_name: Meltano
-  type: marketplace
-  marketplace: meltano-hub
-  channel: elt-connector
-  evidence: https://hub.meltano.com/extractors/tap-baidu--matatika
+- slug: baidu-openrouter
+  label: OpenRouter
+  partner: openrouter
+  partner_name: OpenRouter
+  type: coverage
+  channel: partner-built
+  evidence: https://openrouter.ai/api/v1/models
   source: edge
-  relationship: ipaas-bridge
+  relationship: system-coverage
+  status: not-a-workflow
+  arazzo: null
+- slug: baidu-llm-gateway
+  label: LLM Gateway
+  partner: llmgateway-io
+  partner_name: LLM Gateway
+  type: coverage
+  channel: partner-built
+  evidence: https://api.llmgateway.io/v1/models
+  source: edge
+  relationship: system-coverage
+  status: not-a-workflow
+  arazzo: null
+- slug: baidu-cncf-cloud-native-landscape
+  label: CNCF (Cloud Native Landscape)
+  partner: cncf
+  partner_name: CNCF (Cloud Native Landscape)
+  category: Cloud native landscape
+  type: register
+  channel: standard-directory
+  evidence: https://github.com/cncf/landscape/blob/42dd4cd91dad8ec8558ac02467a43f0805b9957a/landscape.yml
+  source: edge
+  relationship: standard-participant
   contract_reference:
-    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
+    register: CNCF Cloud Native Landscape (github.com/cncf/landscape landscape.yml @42dd4cd91d)
     spec_file: null
-    role: elt-connector:meltano-hub
+    standard: Cloud Native (CNCF)
+    role: cncf-member (Gold)
     registered_name: Baidu
+    registered_names:
+    - Baidu
+    - Baidu Cloud Container Engine
+    - Baidu Cloud Function Compute
+    website: https://cloud.baidu.com/
     matched_domain: baidu.com
     matched_by: domain
-    detected_by: sweep-data-integration.py
-    detected: '2026-10-18'
-    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
-    plugins:
-    - tap-baidu--matatika
-    maintenance_status:
-    - active
-    quality:
-    - gold
-    builder: 'community (Meltano Hub variant maintainers: matatika)'
+    member_tier: Gold
+    joined: '2017-12-01'
+    end_user: false
+    cncf_projects: []
+    landscape_categories:
+    - Platform / Certified Kubernetes - Hosted
+    - Serverless / Hosted Platform
+    landscape_entries: 2
+    signal_note: 'participation only: a landscape listing is standard-participant evidence, not depth. Entries,
+      categories, tier and projects are CONTEXT, never read (breadth is not credit)'
+    detected_by: sweep-cloud-native.py
+    detected: '2026-10-19'
   status: not-a-workflow
   arazzo: null
-- slug: baidu-zoom-own
-  label: Zoom (own)
-  partner: zoom
-  partner_name: Zoom (own)
-  category: Zoom app
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.zoom.us/apps/tBmnNZgLQRyRih_ghMwhCg
+- slug: baidu-cncf-kubernetes-certified-service-provider
+  label: CNCF (Kubernetes Certified Service Provider)
+  partner: cncf
+  partner_name: CNCF (Kubernetes Certified Service Provider)
+  category: Kubernetes services
+  type: register
+  channel: standard-directory
+  evidence: https://landscape.cncf.io/?group=special&view-mode=grid
   source: edge
-  relationship: platform-app
+  relationship: standard-participant
+  contract_reference:
+    register: CNCF Kubernetes Certified Service Provider (github.com/cncf/landscape landscape.yml Special / Kubernetes
+      Certified Service Provider @42dd4cd91d)
+    spec_file: null
+    standard: Kubernetes (KCSP)
+    role: kcsp
+    registered_name: Baidu
+    website: https://cloud.baidu.com/
+    matched_domain: baidu.com
+    matched_by: domain
+    certified_products:
+    - product: Kubernetes Certified Service Provider
+      lapsed: false
+    signal_note: certified_products = ONE entry (the KCSP vetting itself), never a count
+    detected_by: sweep-cloud-native.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: baidu-cncf-certified-kubernetes
+  label: CNCF Certified Kubernetes
+  partner: cncf
+  partner_name: CNCF Certified Kubernetes
+  category: Certified Kubernetes
+  type: register
+  channel: standard-directory
+  evidence: https://github.com/cncf/k8s-conformance/tree/621a55d41c23eab137118626e941b72fb8d32f89/v1.35/baidu-cloud-cce
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: CNCF Certified Kubernetes (github.com/cncf/k8s-conformance @621a55d41c)
+    spec_file: null
+    standard: Kubernetes conformance
+    role: certified-kubernetes
+    registered_name: Baidu Cloud
+    website: https://cloud.baidu.com/product/cce.html
+    matched_domain: baidu.com
+    matched_by: domain
+    certified_products:
+    - product: hosted
+      newest_version: v1.35
+      lapsed: false
+    versions_certified:
+    - v1.24
+    - v1.26
+    - v1.28
+    - v1.30
+    - v1.31
+    - v1.32
+    - v1.34
+    - v1.35
+    products:
+    - Baidu Cloud Container Engine
+    current_window: v1.34+ (newest 4 minors in the register)
+    signal_note: certified_products = one entry per product TYPE (distribution/hosted/installer), lapsed when its
+      newest certified minor is outside the current window; products and versions are context, never read
+    detected_by: sweep-cloud-native.py
+    detected: '2026-10-19'
   status: not-a-workflow
   arazzo: null
