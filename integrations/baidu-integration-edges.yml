@@ -36,23 +36,6 @@ edges:
   matched_by: verified-domain-table
   detected_by: sweep-rag-vector.py
   first_seen: '2026-10-15'
-- partner_name: Zoom (own)
-  partner: zoom
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://marketplace.zoom.us/apps/tBmnNZgLQRyRih_ghMwhCg
-  mirror_of: zoom/integrations/zoom-integration-edges.yml
-  apps:
-  - EasyListening by Baidu Netdisk
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Zoom app
 - partner_name: Meltano
   partner: meltano
   partner_match: aggregator
@@ -354,6 +337,43 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-compliance-assurance.py
   first_seen: '2026-10-20'
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/tBmnNZgLQRyRih_ghMwhCg
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - EasyListening by Baidu Netdisk
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
+- partner_name: Eclipse Foundation (open-vsx)
+  partner: eclipse
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: open-vsx
+  evidence: https://open-vsx.org/namespace/BaiduComate
+  mirror_of: eclipse/integrations/eclipse-integration-edges.yml
+  apps:
+  - 文心快码 Baidu Comate
+  - Remote - Baidu Internal
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: IDE / developer extension marketplace listing
+  badges:
+  - Verified namespace
 generated: '2026-10-13'
 method: searched
 checked:
@@ -371,6 +391,7 @@ checked:
 - https://openrouter.ai/api/v1/models
 - https://plugins.jetbrains.com/
 - zoom/integrations/zoom-integration-edges.yml
+- eclipse/integrations/eclipse-integration-edges.yml
 marketplace_apps: []
 source:
 - https://plugins.jetbrains.com/
