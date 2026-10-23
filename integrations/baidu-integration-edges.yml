@@ -337,77 +337,6 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-compliance-assurance.py
   first_seen: '2026-10-20'
-- partner_name: Zoom (own)
-  partner: zoom
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://marketplace.zoom.us/apps/tBmnNZgLQRyRih_ghMwhCg
-  mirror_of: zoom/integrations/zoom-integration-edges.yml
-  apps:
-  - EasyListening by Baidu Netdisk
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Zoom app
-- partner_name: Eclipse Foundation (open-vsx)
-  partner: eclipse
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: open-vsx
-  evidence: https://open-vsx.org/namespace/BaiduComate
-  mirror_of: eclipse/integrations/eclipse-integration-edges.yml
-  apps:
-  - 文心快码 Baidu Comate
-  - Remote - Baidu Internal
-  listing_count: 1
-  detected: '2026-10-20'
-  detected_by: mirror-platform-listings.py
-  category: IDE / developer extension marketplace listing
-  badges:
-  - Verified namespace
-- partner_name: OpenTofu (opentofu-registry)
-  partner: opentofu
-  partner_match: mirror
-  mirror_match: register
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: opentofu-registry
-  evidence: https://search.opentofu.org/provider/baidubce/baiducloud
-  mirror_of: opentofu/integrations/opentofu-integration-edges.yml
-  apps:
-  - baidubce/baiducloud
-  listing_count: 1
-  detected: '2026-10-21'
-  detected_by: mirror-platform-listings.py
-  category: infrastructure-as-code provider registry listing
-- partner_name: Terraform (terraform-registry)
-  partner: terraform
-  partner_match: mirror
-  mirror_match: register
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: terraform-registry
-  evidence: https://registry.terraform.io/providers/baidubce/baiducloud
-  mirror_of: terraform/integrations/terraform-integration-edges.yml
-  apps:
-  - baidubce/baiducloud
-  listing_count: 1
-  detected: '2026-10-21'
-  detected_by: mirror-platform-listings.py
-  category: infrastructure-as-code provider registry listing
 - partner_name: GitHub secret scanning partner program
   partner: github
   partner_match: register-name
@@ -527,6 +456,110 @@ edges:
   - Tri Sync
   - VaultSail
   - Baidu Sync Safe
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/tBmnNZgLQRyRih_ghMwhCg
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - EasyListening by Baidu Netdisk
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
+- partner_name: Eclipse Foundation (open-vsx)
+  partner: eclipse
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: open-vsx
+  evidence: https://open-vsx.org/namespace/BaiduComate
+  mirror_of: eclipse/integrations/eclipse-integration-edges.yml
+  apps:
+  - 文心快码 Baidu Comate
+  - Remote - Baidu Internal
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: IDE / developer extension marketplace listing
+  badges:
+  - Verified namespace
+- partner_name: OpenTofu (opentofu-registry)
+  partner: opentofu
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: opentofu-registry
+  evidence: https://search.opentofu.org/provider/baidubce/baiducloud
+  mirror_of: opentofu/integrations/opentofu-integration-edges.yml
+  apps:
+  - baidubce/baiducloud
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+- partner_name: Terraform (terraform-registry)
+  partner: terraform
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: terraform-registry
+  evidence: https://registry.terraform.io/providers/baidubce/baiducloud
+  mirror_of: terraform/integrations/terraform-integration-edges.yml
+  apps:
+  - baidubce/baiducloud
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+- partner_name: Hugging Face (hugging-face-hub)
+  partner: hugging-face
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: hugging-face-hub
+  evidence: https://huggingface.co/baidu
+  mirror_of: hugging-face/integrations/hugging-face-integration-edges.yml
+  apps:
+  - baidu/ERIA-1K-Benchmark
+  - baidu/Unlimited-OCR
+  - baidu/ERNIE-4.5-21B-A3B-Thinking
+  - baidu/Qianfan-OCR
+  - baidu/ERNIE-4.5-VL-28B-A3B-PT
+  - baidu/ERNIE-4.5-21B-A3B-PT
+  - baidu/ERNIE-4.5-0.3B-PT
+  - baidu/ERNIE-4.5-300B-A47B-PT
+  - baidu/ERNIE-Image-Turbo
+  - baidu/ERNIE-4.5-VL-28B-A3B-Thinking
+  - baidu/ernie_4.5_turbo_demo
+  - baidu/ernie_x1_turbo_demo
+  - baidu/Qianfan-OCR-Demo
+  - baidu/conversation_demo
+  - baidu/knowledge_retrieval_demo
+  listing_count: 3
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Hugging Face Hub datasets
+  badges:
+  - Verified publisher (Hugging Face verified organisation)
 generated: '2026-10-13'
 method: searched
 checked:
@@ -562,6 +595,7 @@ checked:
 - https://raw.githubusercontent.com/<repo>/HEAD/manifest.json
 - https://raw.githubusercontent.com/obsidianmd/obsidian-releases/793b52114f54b055b760ef47761ec5c93d689804/community-plugin-stats.json
 - https://raw.githubusercontent.com/obsidianmd/obsidian-releases/793b52114f54b055b760ef47761ec5c93d689804/community-plugins.json
+- hugging-face/integrations/hugging-face-integration-edges.yml
 marketplace_apps: []
 source:
 - https://plugins.jetbrains.com/
