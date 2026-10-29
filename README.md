@@ -64,6 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Baidu is a company surfaced as a portfolio company of hillhouse, idg-capital and added to the API Evangelist network as a stub for enrichment. Sector: technology. This profile is a lead awaiting the enrichment pipeline.
+Baidu is a leading Chinese internet and artificial-intelligence company whose developer surface spans three main product lines. Baidu AI Cloud "Qianfan" is a Model-as-a-Service platform hosting the ERNIE model family behind an OpenAI-compatible REST API for chat, embeddings, and agent building (AppBuilder). The Baidu AI Open Platform exposes OCR, NLP, speech, face, image, and knowledge-graph APIs. The Baidu Maps Open Platform (LBS) provides geocoding, place search, route planning, weather, and real-time traffic to millions of registered developers, and ships an official Model Context Protocol (MCP) server with a hosted remote endpoint. This profile was surfaced as a portfolio company and enriched with real, first-party developer artifacts.
 
-Backed by: hillhouse, idg-capital — https://www.baidu.com
+**Areas:** Company · Technology · Artificial Intelligence · Machine Learning · LLM · Maps · Geolocation · Cloud · China · Foundation Models
+
+## Baidu on APIs.io
+
+Everything profiled for Baidu is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/baidu/](https://apis.io/providers/baidu/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Baidu AI Cloud Qianfan](https://apis.io/apis/baidu/baidu-ai-cloud-qianfan/) — OpenAI-compatible LLM / Model-as-a-Service API hosting the ERNIE family and select open models (DeepSeek, GLM, etc.) via chat completions and embeddings.
+- [Baidu Maps Open Platform](https://apis.io/apis/baidu/baidu-maps-open-platform/) — LBS web-service API: geocoding, reverse geocoding, place/POI search, route planning, weather, IP location, and real-time traffic. Ships an official MCP server.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [baidu-maps](https://apis.io/servers/baidu/baidu-maps/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Baidu Authentication](https://apis.io/security/baidu/baidu-authentication/)
+- [Baidu Domain Security](https://apis.io/security/baidu/baidu-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.baidu.com)
+- [Documentation](https://intl.cloud.baidu.com/doc/qianfan/index.html)
+- [API reference](https://lbsyun.baidu.com/faq/api?title=webapi)
+- [Sign up](https://console.bce.baidu.com/)
+- [GitHub](https://github.com/baidubce)
+
+## API Evangelist rating
+
+**Kin Score 18.5** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 13.2 |
+
+**Agent readiness 6.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 10.9** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/baidu/](https://apis.io/providers/baidu/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Baidu: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/baidu/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
